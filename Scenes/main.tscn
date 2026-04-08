@@ -1,27 +1,192 @@
 [gd_scene format=3 uid="uid://8lpk23h2ui3t"]
 
+[ext_resource type="Script" uid="uid://c5j5gtiwnbax7" path="res://Script/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://c0r21vnuya81t" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://jlmc8usxrybt" path="res://Scenes/player_2.tscn" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://xlq85ntj2oo6" path="res://assets/tiles/New Piskel (1).png" id="4_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://ddck4pcdkyhb6" path="res://assets/tiles/hypo.png" id="5_hptm8"]
+[ext_resource type="Texture2D" uid="uid://q7ispuj37n55" path="res://assets/tiles/block.png" id="6_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://biyvihkwehhd0" path="res://assets/tiles/platform.png" id="7_6iyac"]
+[ext_resource type="Texture2D" uid="uid://v5iu7634wxbu" path="res://assets/tiles/treebottom.png" id="8_fdnlq"]
+[ext_resource type="Texture2D" uid="uid://buciu5ifw8stq" path="res://assets/tiles/treetop.png" id="9_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://dk1boq7wx4f45" path="res://Scenes/platform.tscn" id="10_hptm8"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjgbg"]
-normal = Vector2(-0.008771592, -0.9999615)
-distance = -424.47537
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsu2k"]
+texture = ExtResource("4_ynf5e")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k12tt"]
+texture = ExtResource("5_hptm8")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h1bgf"]
+texture = ExtResource("6_d1ilt")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3802"]
+texture = ExtResource("7_6iyac")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fevyy"]
+texture = ExtResource("8_fdnlq")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hibaj"]
+texture = ExtResource("9_jkdf5")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pdsj5"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_wsu2k")
+sources/1 = SubResource("TileSetAtlasSource_k12tt")
+sources/2 = SubResource("TileSetAtlasSource_h1bgf")
+sources/3 = SubResource("TileSetAtlasSource_b3802")
+sources/4 = SubResource("TileSetAtlasSource_fevyy")
+sources/5 = SubResource("TileSetAtlasSource_hibaj")
+
+[sub_resource type="Animation" id="Animation_hptm8"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(840, 604)]
+}
+
+[sub_resource type="Animation" id="Animation_d1ilt"]
+resource_name = "move"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.1, 2.48, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(840, 604), Vector2(1077, 604), Vector2(1077, 604), Vector2(1134, 605)]
+}
+
+[sub_resource type="Animation" id="Animation_6iyac"]
+resource_name = "sideup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(840, 604), Vector2(1132, 515)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6iyac"]
+_data = {
+&"RESET": SubResource("Animation_hptm8"),
+&"move": SubResource("Animation_d1ilt"),
+&"sideup": SubResource("Animation_6iyac")
+}
+
+[sub_resource type="Animation" id="Animation_fdnlq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1147, 517)]
+}
+
+[sub_resource type="Animation" id="Animation_jkdf5"]
+resource_name = "upmove"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1147, 517), Vector2(1076, 447), Vector2(1184, 518)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wsu2k"]
+_data = {
+&"RESET": SubResource("Animation_fdnlq"),
+&"upmove": SubResource("Animation_jkdf5")
+}
 
 [node name="main" type="Node2D" unique_id=1756383020]
-
-[node name="Player2" parent="." unique_id=1683325602 instance=ExtResource("2_bo1nx")]
-position = Vector2(781, 350)
-
-[node name="Camera2D" type="Camera2D" parent="Player2" unique_id=1318403008]
-zoom = Vector2(2, 2)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1803221943]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=980567832]
-shape = SubResource("WorldBoundaryShape2D_jjgbg")
+script = ExtResource("1_8gbba")
 
 [node name="Player" parent="." unique_id=1542156909 instance=ExtResource("1_jjgbg")]
-position = Vector2(246, 338)
+position = Vector2(57, 563)
+scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1989933352]
+position = Vector2(52, -20)
 zoom = Vector2(2, 2)
+
+[node name="Player2" parent="." unique_id=1683325602 instance=ExtResource("2_bo1nx")]
+position = Vector2(774, 368)
+scale = Vector2(1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="Player2" unique_id=1318403008]
+position = Vector2(30, 1)
+zoom = Vector2(2, 2)
+
+[node name="Timer" type="Timer" parent="." unique_id=1461510247]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=2082099271]
+position = Vector2(1, 0)
+tile_set = SubResource("TileSet_pdsj5")
+format = 2
+layer_0/tile_data = PackedInt32Array(2424832, 0, 0, 2424833, 0, 0, 2424834, 0, 0, 2424835, 0, 0, 2424836, 0, 0, 2490368, 2, 0, 2490369, 2, 0, 2490370, 2, 0, 2490371, 2, 0, 2490372, 2, 0, 2555908, 2, 0, 2555907, 2, 0, 2555906, 2, 0, 2555905, 2, 0, 2555904, 2, 0, 2359304, 1, 0, 2293773, 1, 0, 2359314, 1, 0, 2490390, 1, 0, 2490405, 1, 0, 2490404, 1, 0, 2490406, 2, 0, 2424871, 2, 0, 2293799, 2, 0, 2293800, 2, 0, 2293801, 2, 0, 2293802, 2, 0, 2293803, 2, 0, 2293804, 2, 0, 2293805, 2, 0, 2293806, 2, 0, 2293807, 2, 0, 2424872, 2, 0, 2424873, 2, 0, 2424874, 2, 0, 2424875, 2, 0, 2424876, 2, 0, 2424877, 2, 0, 2424878, 2, 0, 2424879, 2, 0, 2424870, 2, 0, 2424880, 2, 0, 2424881, 2, 0, 2359296, 2, 0, 2293760, 5, 0, 2490402, 2, 0, 2490401, 2, 0, 2228271, 2, 0, 2162735, 2, 0, 2097199, 2, 0, 2097198, 2, 0, 2097197, 2, 0, 2097196, 2, 0, 2097195, 2, 0, 2097194, 2, 0, 2097193, 2, 0, 2097192, 2, 0, 2097191, 2, 0, 2162727, 2, 0, 2228263, 2, 0, 2162728, 1, 0, 2162729, 1, 0, 2228264, 1, 0, 2228265, 1, 0, 2228266, 1, 0, 2228267, 1, 0, 2228268, 1, 0, 2228269, 1, 0, 2162733, 1, 0, 2162734, 1, 0, 2228270, 1, 0, 2162732, 1, 0, 2162731, 1, 0, 2162730, 1, 0, 2097227, 2, 0, 2097228, 2, 0, 1966155, 2, 0, 1966156, 2, 0, 2097229, 2, 0, 2097230, 2, 0, 2162766, 2, 0, 2228302, 2, 0, 2228303, 2, 0, 2228304, 2, 0, 2228305, 2, 0, 2228306, 2, 0, 2228307, 2, 0, 2228308, 2, 0, 2228309, 2, 0, 2228310, 2, 0, 2228311, 2, 0, 2162775, 2, 0, 2097239, 2, 0, 2162774, 1, 0, 2162767, 5, 0, 2097238, 5, 0)
+
+[node name="Platform" parent="." unique_id=1447231459 instance=ExtResource("10_hptm8")]
+position = Vector2(840, 604)
+scale = Vector2(2, 2)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform" unique_id=1135781848]
+libraries/ = SubResource("AnimationLibrary_6iyac")
+autoplay = &"move"
+
+[node name="Platform2" parent="." unique_id=692933771 instance=ExtResource("10_hptm8")]
+position = Vector2(1147, 517)
+scale = Vector2(2, 2)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2" unique_id=1994580514]
+libraries/ = SubResource("AnimationLibrary_wsu2k")
+autoplay = &"upmove"
+
+[node name="Platform3" parent="." unique_id=1052055794 instance=ExtResource("10_hptm8")]
+position = Vector2(1077, 574)
+scale = Vector2(2, 2)
+
+[node name="Platform4" parent="." unique_id=1207282684 instance=ExtResource("10_hptm8")]
+position = Vector2(1077, 507)
+scale = Vector2(2, 2)
+
+[connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
