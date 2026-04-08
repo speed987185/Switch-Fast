@@ -7,7 +7,7 @@ collision_mask = 2
 script = ExtResource("1_d6013")
 
 [node name="dyingtime" type="Timer" parent="." unique_id=1308391047]
-wait_time = 0.124
+wait_time = 2.0
 one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
