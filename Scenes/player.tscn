@@ -85,8 +85,10 @@ animations = [{
 radius = 14.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1542156909]
+z_index = 5
 texture_filter = 1
 scale = Vector2(2, 2)
+collision_layer = 2
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=386712573]

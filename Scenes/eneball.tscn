@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://badnr0ovx2yww"]
+
+[ext_resource type="Texture2D" uid="uid://c5p6td0klt0e8" path="res://assets/enemy/eneball.png" id="1_v35gl"]
+[ext_resource type="PackedScene" uid="uid://bxwty124in8ht" path="res://Scenes/kill_zone.tscn" id="2_wgwfx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_prltp"]
+radius = 4.0
+
+[node name="EneBall" type="Node2D" unique_id=174177979]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2097433495]
+texture = ExtResource("1_v35gl")
+
+[node name="KillZone" parent="." unique_id=1430627458 instance=ExtResource("2_wgwfx")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1991118660]
+shape = SubResource("CircleShape2D_prltp")

@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://chjd4ai2s4jcb"]
+
+[ext_resource type="Texture2D" uid="uid://bkb3wxr4yuhy3" path="res://assets/enemy/enemy2.png" id="1_br11b"]
+[ext_resource type="PackedScene" uid="uid://bxwty124in8ht" path="res://Scenes/kill_zone.tscn" id="2_6qdih"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o50wb"]
+atlas = ExtResource("1_br11b")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1gkv"]
+atlas = ExtResource("1_br11b")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dd1c"]
+atlas = ExtResource("1_br11b")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kuqi"]
+atlas = ExtResource("1_br11b")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4kqu"]
+atlas = ExtResource("1_br11b")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac0h6"]
+atlas = ExtResource("1_br11b")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w8h4n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o50wb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1gkv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dd1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kuqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4kqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac0h6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_13r22"]
+radius = 8.5440035
+
+[node name="Node2D" type="Node2D" unique_id=656956169]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1275172544]
+sprite_frames = SubResource("SpriteFrames_w8h4n")
+autoplay = "default"
+frame_progress = 0.7919327
+
+[node name="KillZone" parent="." unique_id=1430627458 instance=ExtResource("2_6qdih")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=60335163]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_13r22")
