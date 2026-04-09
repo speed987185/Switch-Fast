@@ -19,8 +19,8 @@ func _ready():
 	player2.process_mode = Node.PROCESS_MODE_DISABLED
 	enable_camera(player2, false)
 	
-	# Timer of 5 sec to use player 2
-	timer.wait_time = 5.0
+	# Timer of 5 sec
+	timer.wait_time = 1.5
 	timer.one_shot = true
 	timer.timeout.connect(_on_timer_timeout)
 
