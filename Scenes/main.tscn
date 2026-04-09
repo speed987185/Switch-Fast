@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dvcfua04k7e1q" path="res://Scenes/batsloth.tscn" id="15_wsu2k"]
 [ext_resource type="PackedScene" uid="uid://badnr0ovx2yww" path="res://Scenes/eneball.tscn" id="16_k12tt"]
 [ext_resource type="FontFile" uid="uid://b6ee30ss2buoc" path="res://font/font/Pixelmax-Regular.otf" id="18_b3802"]
+[ext_resource type="PackedScene" uid="uid://d0ujllnxwqp8m" path="res://Scenes/pause_menu.tscn" id="21_pdsj5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsu2k"]
 texture = ExtResource("4_ynf5e")
@@ -860,5 +861,7 @@ offset_bottom = 397.0
 theme_override_fonts/font = ExtResource("18_b3802")
 theme_override_font_sizes/font_size = 43
 text = "JUMP!!!!!!!!!!"
+
+[node name="PauseMenu" parent="." unique_id=1266123414 instance=ExtResource("21_pdsj5")]
 
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]

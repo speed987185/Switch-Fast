@@ -150,7 +150,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cayip")
 text = "Hop On "
 
 [node name="Coin" parent="." unique_id=257496962 instance=ExtResource("3_cayip")]
-position = Vector2(423, 336)
+position = Vector2(480, 377)
 scale = Vector2(4, 4)
 
 [node name="click" type="AudioStreamPlayer2D" parent="." unique_id=663310324]
