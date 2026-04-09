@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://c5j5gtiwnbax7" path="res://Script/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://c0r21vnuya81t" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://jlmc8usxrybt" path="res://Scenes/player_2.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dyo88nbbwmdlp" path="res://Scenes/game_manager.tscn" id="2_fevyy"]
+[ext_resource type="PackedScene" uid="uid://dgt7jinmpirqp" path="res://Scenes/fade_transition.tscn" id="2_hibaj"]
 [ext_resource type="Texture2D" uid="uid://xlq85ntj2oo6" path="res://assets/tiles/New Piskel (1).png" id="4_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://ddck4pcdkyhb6" path="res://assets/tiles/hypo.png" id="5_hptm8"]
 [ext_resource type="Texture2D" uid="uid://q7ispuj37n55" path="res://assets/tiles/block.png" id="6_d1ilt"]
@@ -506,8 +508,13 @@ _data = {
 &"upmove": SubResource("Animation_jkdf5")
 }
 
-[node name="main" type="Node2D" unique_id=1756383020]
+[node name="level1" type="Node2D" unique_id=1756383020]
 script = ExtResource("1_8gbba")
+
+[node name="FadeTransition" parent="." unique_id=1327850712 instance=ExtResource("2_hibaj")]
+
+[node name="GameManager" parent="." unique_id=964710186 instance=ExtResource("2_fevyy")]
+unique_name_in_owner = true
 
 [node name="Player" parent="." unique_id=1542156909 instance=ExtResource("1_jjgbg")]
 position = Vector2(44, 554)
@@ -769,19 +776,19 @@ position = Vector2(4766, 336)
 [node name="Texts" type="Node" parent="." unique_id=61148459]
 
 [node name="Label" type="Label" parent="Texts" unique_id=1138435221]
-offset_left = -45.0
-offset_top = 493.0
-offset_right = 174.0
-offset_bottom = 516.0
+offset_left = -52.0
+offset_top = 426.0
+offset_right = 167.0
+offset_bottom = 449.0
 theme_override_fonts/font = ExtResource("18_b3802")
 theme_override_font_sizes/font_size = 16
 text = "WELCOME TO FASTOSWITCH"
 
 [node name="Label2" type="Label" parent="Texts" unique_id=632311753]
-offset_left = 472.0
-offset_top = 508.0
-offset_right = 691.0
-offset_bottom = 545.0
+offset_left = 460.0
+offset_top = 470.0
+offset_right = 679.0
+offset_bottom = 507.0
 theme_override_fonts/font = ExtResource("18_b3802")
 text = "Try Clicking Left
 Mouse"

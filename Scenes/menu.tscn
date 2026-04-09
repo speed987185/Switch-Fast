@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://gh1i821y4keb"]
+
+[ext_resource type="FontFile" uid="uid://b6ee30ss2buoc" path="res://font/font/Pixelmax-Regular.otf" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://b83ggictp2qv2" path="res://Script/menu.gd" id="1_158mb"]
+[ext_resource type="Texture2D" uid="uid://bcqweernc3f5f" path="res://Menu/menu-bg.png" id="1_xhh6f"]
+[ext_resource type="PackedScene" uid="uid://dgt7jinmpirqp" path="res://Scenes/fade_transition.tscn" id="2_wwsa2"]
+[ext_resource type="PackedScene" uid="uid://cdry7y6itg41m" path="res://Scenes/coin.tscn" id="3_cayip"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cayip"]
+texture = ExtResource("1_xhh6f")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhh6f"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 8
+shadow_offset = Vector2(10, 19)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_158mb"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 8
+shadow_offset = Vector2(10, 19)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbdvm"]
+bg_color = Color(0.28778407, 0.28778407, 0.28778407, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 8
+shadow_offset = Vector2(10, 19)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwsa2"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 8
+shadow_offset = Vector2(10, 19)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsrd8"]
+bg_color = Color(0.28778407, 0.28778407, 0.28778407, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 8
+shadow_offset = Vector2(10, 19)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cayip"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 8
+shadow_offset = Vector2(10, 19)
+
+[node name="Menu" type="Control" unique_id=1368160639]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_158mb")
+
+[node name="FadeTransition" parent="." unique_id=1327850712 instance=ExtResource("2_wwsa2")]
+
+[node name="fade_timer" type="Timer" parent="FadeTransition" unique_id=1735280569]
+
+[node name="Panel" type="Panel" parent="." unique_id=419597426]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_cayip")
+
+[node name="quit" type="Button" parent="." unique_id=302736946]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = 173.0
+offset_right = 85.0
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1rerr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xhh6f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_158mb")
+text = "Quit"
+
+[node name="lvl" type="Button" parent="." unique_id=1259573858]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = 37.0
+offset_right = 225.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1rerr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xhh6f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wbdvm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wwsa2")
+text = "Levels"
+
+[node name="play" type="Button" parent="." unique_id=2007145324]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = 41.0
+offset_right = -47.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_1rerr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xhh6f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jsrd8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cayip")
+text = "Hop On "
+
+[node name="Coin" parent="." unique_id=257496962 instance=ExtResource("3_cayip")]
+position = Vector2(423, 336)
+scale = Vector2(4, 4)
+
+[connection signal="timeout" from="FadeTransition/fade_timer" to="." method="_on_fade_timer_timeout"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="lvl" to="." method="_on_lvl_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]

@@ -71,6 +71,10 @@ func enable_camera(player_node: Node2D, enable: bool):
 		cam = player_node.get_node_or_null("Camera")
 		if cam:
 			cam.enabled = enable
+			
+func _fade():
+		$FadeTransition/AnimationPlayer.play("fade_out")
+	
 	
 	
 	

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dyo88nbbwmdlp"]
+
+[ext_resource type="Script" uid="uid://cwc35c7wnvpds" path="res://Script/game_manager.gd" id="1_e5fcp"]
+[ext_resource type="FontFile" uid="uid://b6ee30ss2buoc" path="res://font/font/Pixelmax-Regular.otf" id="2_sq00h"]
+
+[node name="GameManager" type="Node" unique_id=964710186]
+script = ExtResource("1_e5fcp")
+
+[node name="Points" type="Label" parent="." unique_id=1457350601]
+offset_left = 4434.0
+offset_top = 349.0
+offset_right = 4674.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("2_sq00h")
+text = "you have collected X points"
+
+[node name="Attempts" type="Label" parent="." unique_id=1794707201]
+offset_left = -115.0
+offset_top = 556.0
+offset_right = -27.0
+offset_bottom = 579.0
+theme_override_fonts/font = ExtResource("2_sq00h")
+text = "Attemps: 1"
