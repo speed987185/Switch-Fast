@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://chjd4ai2s4jcb" path="res://Scenes/batbird.tscn" id="15_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://dvcfua04k7e1q" path="res://Scenes/batsloth.tscn" id="15_wsu2k"]
 [ext_resource type="PackedScene" uid="uid://badnr0ovx2yww" path="res://Scenes/eneball.tscn" id="16_k12tt"]
+[ext_resource type="FontFile" uid="uid://b6ee30ss2buoc" path="res://font/font/Pixelmax-Regular.otf" id="18_b3802"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsu2k"]
 texture = ExtResource("4_ynf5e")
@@ -73,6 +74,43 @@ sources/8 = SubResource("TileSetAtlasSource_jkdf5")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fdnlq"]
 normal = Vector2(0.002743474, -0.99999624)
 distance = -756.9889
+
+[sub_resource type="Animation" id="Animation_ueoa1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1371, 534)]
+}
+
+[sub_resource type="Animation" id="Animation_hpc6h"]
+resource_name = "leftright"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1371, 534), Vector2(1280, 532)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kltya"]
+_data = {
+&"RESET": SubResource("Animation_ueoa1"),
+&"leftright": SubResource("Animation_hpc6h")
+}
 
 [sub_resource type="Animation" id="Animation_h1bgf"]
 length = 0.001
@@ -511,7 +549,11 @@ position = Vector2(10, 5)
 shape = SubResource("WorldBoundaryShape2D_fdnlq")
 
 [node name="batsloth" parent="." unique_id=1985394943 instance=ExtResource("15_wsu2k")]
-position = Vector2(1322, 533)
+position = Vector2(1371, 534)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="batsloth" unique_id=585594301]
+libraries/ = SubResource("AnimationLibrary_kltya")
+autoplay = &"leftright"
 
 [node name="EneBalls" type="Node" parent="." unique_id=1810233548]
 
@@ -724,11 +766,92 @@ position = Vector2(4703, 362)
 [node name="Coin25" parent="Coins" unique_id=824254172 instance=ExtResource("11_d1ilt")]
 position = Vector2(4766, 336)
 
-[node name="Label" type="Label" parent="." unique_id=1138435221]
+[node name="Texts" type="Node" parent="." unique_id=61148459]
+
+[node name="Label" type="Label" parent="Texts" unique_id=1138435221]
 offset_left = -45.0
-offset_top = 479.0
+offset_top = 493.0
 offset_right = 174.0
-offset_bottom = 502.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("18_b3802")
+theme_override_font_sizes/font_size = 16
 text = "WELCOME TO FASTOSWITCH"
+
+[node name="Label2" type="Label" parent="Texts" unique_id=632311753]
+offset_left = 472.0
+offset_top = 508.0
+offset_right = 691.0
+offset_bottom = 545.0
+theme_override_fonts/font = ExtResource("18_b3802")
+text = "Try Clicking Left
+Mouse"
+
+[node name="Label3" type="Label" parent="Texts" unique_id=1489871722]
+offset_left = 225.0
+offset_top = 704.0
+offset_right = 444.0
+offset_bottom = 741.0
+theme_override_fonts/font = ExtResource("18_b3802")
+text = "could be 
+another way.."
+
+[node name="Label4" type="Label" parent="Texts" unique_id=1916838320]
+offset_left = 1278.0
+offset_top = 423.0
+offset_right = 1497.0
+offset_bottom = 460.0
+theme_override_fonts/font = ExtResource("18_b3802")
+text = "it hurtss"
+
+[node name="Label5" type="Label" parent="Texts" unique_id=359519601]
+offset_left = 1808.0
+offset_top = 380.0
+offset_right = 2027.0
+offset_bottom = 417.0
+theme_override_fonts/font = ExtResource("18_b3802")
+text = "hurry"
+
+[node name="Label9" type="Label" parent="Texts" unique_id=294333052]
+offset_left = 3972.0
+offset_top = 616.0
+offset_right = 4191.0
+offset_bottom = 653.0
+theme_override_fonts/font = ExtResource("18_b3802")
+text = "BE CAREFUL"
+
+[node name="Label10" type="Label" parent="Texts" unique_id=454839177]
+offset_left = 4685.0
+offset_top = 418.0
+offset_right = 4904.0
+offset_bottom = 455.0
+theme_override_fonts/font = ExtResource("18_b3802")
+text = "you made it king 👑"
+
+[node name="Label6" type="Label" parent="Texts" unique_id=795139851]
+offset_left = 2116.0
+offset_top = 553.0
+offset_right = 2343.0
+offset_bottom = 599.0
+theme_override_fonts/font = ExtResource("18_b3802")
+theme_override_font_sizes/font_size = 43
+text = "told you"
+
+[node name="Label7" type="Label" parent="Texts" unique_id=704177822]
+offset_left = 3040.0
+offset_top = 521.0
+offset_right = 3267.0
+offset_bottom = 567.0
+theme_override_fonts/font = ExtResource("18_b3802")
+theme_override_font_sizes/font_size = 43
+text = "JUMP!!!!!!!!!!"
+
+[node name="Label8" type="Label" parent="Texts" unique_id=1347172497]
+offset_left = 3270.0
+offset_top = 351.0
+offset_right = 3497.0
+offset_bottom = 397.0
+theme_override_fonts/font = ExtResource("18_b3802")
+theme_override_font_sizes/font_size = 43
+text = "JUMP!!!!!!!!!!"
 
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
