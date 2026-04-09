@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6tk8b4f488du" path="res://Script/player_2.gd" id="1_cgts5"]
 [ext_resource type="Texture2D" uid="uid://dvtryygnyqrje" path="res://assets/player_2/player2_idle.png" id="1_mkara"]
+[ext_resource type="Texture2D" uid="uid://cx0kuvpephkks" path="res://assets/player_2/player2_run.png" id="3_a3adp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cgts5"]
 atlas = ExtResource("1_mkara")
@@ -35,6 +36,22 @@ region = Rect2(192, 0, 32, 32)
 atlas = ExtResource("1_mkara")
 region = Rect2(224, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgubp"]
+atlas = ExtResource("3_a3adp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os74a"]
+atlas = ExtResource("3_a3adp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggx0o"]
+atlas = ExtResource("3_a3adp")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kjde"]
+atlas = ExtResource("3_a3adp")
+region = Rect2(96, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgubp"]
 animations = [{
 "frames": [{
@@ -63,8 +80,25 @@ animations = [{
 "texture": SubResource("AtlasTexture_8os5a")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgubp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_os74a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggx0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kjde")
+}],
+"loop": true,
+"name": &"run",
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgts5"]
@@ -80,8 +114,9 @@ script = ExtResource("1_cgts5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2130291747]
 position = Vector2(1, -0.5)
 sprite_frames = SubResource("SpriteFrames_dgubp")
-autoplay = "default"
-frame_progress = 0.030702045
+animation = &"run"
+autoplay = "idle"
+frame_progress = 0.3094398
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=399174942]
 z_index = 5
