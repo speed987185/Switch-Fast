@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="SwitchFast"
-run/main_scene="uid://8lpk23h2ui3t"
+run/main_scene="uid://gh1i821y4keb"
+run/print_header=false
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://b58ud11a8ys8o" path="res://assets/player/New Piskel.png" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://b7aq16ukn6fk6" path="res://assets/player/player_jump.png" id="3_vgqql"]
 [ext_resource type="Texture2D" uid="uid://tky64iq3sfc7" path="res://assets/player/player_run.png" id="4_fkybt"]
+[ext_resource type="AudioStream" uid="uid://c4xb8kh7bpf3n" path="res://SFX/nicejump.mp3" id="5_fkybt"]
+[ext_resource type="AudioStream" uid="uid://wrhks3cghxwh" path="res://SFX/roll.mp3" id="6_x3wgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
 atlas = ExtResource("2_6t5aa")
@@ -238,3 +240,11 @@ frame_progress = 0.13707942
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1392551363]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_h4iuc")
+
+[node name="Sfx_Jump" type="AudioStreamPlayer2D" parent="." unique_id=820528419]
+stream = ExtResource("5_fkybt")
+volume_db = -5.0
+
+[node name="rolling" type="AudioStreamPlayer2D" parent="." unique_id=1261590837]
+stream = ExtResource("6_x3wgy")
+volume_db = 24.0

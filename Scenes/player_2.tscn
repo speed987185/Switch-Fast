@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://6tk8b4f488du" path="res://Script/player_2.gd" id="1_cgts5"]
 [ext_resource type="Texture2D" uid="uid://dvtryygnyqrje" path="res://assets/player_2/player2_idle.png" id="1_mkara"]
 [ext_resource type="Texture2D" uid="uid://cx0kuvpephkks" path="res://assets/player_2/player2_run.png" id="3_a3adp"]
+[ext_resource type="AudioStream" uid="uid://c4xb8kh7bpf3n" path="res://SFX/nicejump.mp3" id="4_n0kdt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cgts5"]
 atlas = ExtResource("1_mkara")
@@ -122,3 +123,7 @@ frame_progress = 0.3094398
 z_index = 5
 position = Vector2(1.25, 1)
 shape = SubResource("RectangleShape2D_cgts5")
+
+[node name="Sfx_jump" type="AudioStreamPlayer2D" parent="." unique_id=159181000]
+stream = ExtResource("4_n0kdt")
+volume_db = -5.0

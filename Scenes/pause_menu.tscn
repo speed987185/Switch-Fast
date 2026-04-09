@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://d0ujllnxwqp8m"]
+
+[node name="PauseMenu" type="Control" unique_id=411212120]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1883788588]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttons" type="Node" parent="PanelContainer" unique_id=1415451099]
+
+[node name="Button2" type="Button" parent="PanelContainer/Buttons" unique_id=491695079]
+offset_left = 454.0
+offset_top = 354.0
+offset_right = 650.0
+offset_bottom = 409.0
+
+[node name="Button3" type="Button" parent="PanelContainer/Buttons" unique_id=1678830682]
+offset_left = 459.0
+offset_top = 477.0
+offset_right = 655.0
+offset_bottom = 532.0
+
+[node name="Button" type="Button" parent="PanelContainer/Buttons" unique_id=1586466284]
+offset_left = -2.0
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=789020533]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 225.0
+offset_right = 731.0
+offset_bottom = 265.0

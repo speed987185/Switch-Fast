@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bcqweernc3f5f" path="res://Menu/menu-bg.png" id="1_xhh6f"]
 [ext_resource type="PackedScene" uid="uid://dgt7jinmpirqp" path="res://Scenes/fade_transition.tscn" id="2_wwsa2"]
 [ext_resource type="PackedScene" uid="uid://cdry7y6itg41m" path="res://Scenes/coin.tscn" id="3_cayip"]
+[ext_resource type="AudioStream" uid="uid://cspiy01eiqwp" path="res://SFX/click.wav" id="6_jsrd8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cayip"]
 texture = ExtResource("1_xhh6f")
@@ -151,6 +152,9 @@ text = "Hop On "
 [node name="Coin" parent="." unique_id=257496962 instance=ExtResource("3_cayip")]
 position = Vector2(423, 336)
 scale = Vector2(4, 4)
+
+[node name="click" type="AudioStreamPlayer2D" parent="." unique_id=663310324]
+stream = ExtResource("6_jsrd8")
 
 [connection signal="timeout" from="FadeTransition/fade_timer" to="." method="_on_fade_timer_timeout"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
