@@ -1,11 +1,80 @@
 [gd_scene format=3 uid="uid://gcsxex131pan"]
 
+[ext_resource type="Script" uid="uid://cauhi0gi6wxwj" path="res://Script/level_select_menu.gd" id="1_3g6d4"]
 [ext_resource type="Texture2D" uid="uid://c13ktnwis356y" path="res://Menu/level.png" id="1_271b8"]
+[ext_resource type="Texture2D" uid="uid://cfrp1e80qxm7p" path="res://Menu/level_lock.png" id="2_52mtt"]
 
 [node name="LevelSelectMenu" type="Node2D" unique_id=1434110705]
+script = ExtResource("1_3g6d4")
+
+[node name="lvl1" type="Button" parent="." unique_id=1210796959]
+unique_name_in_owner = true
+z_index = 4
+offset_left = 173.0
+offset_top = 241.00003
+offset_right = 213.0
+offset_bottom = 281.00003
+scale = Vector2(3.1067264, 2.8704872)
+icon = ExtResource("1_271b8")
+
+[node name="lvl2" type="Button" parent="." unique_id=1852731952]
+unique_name_in_owner = true
+z_index = 4
+offset_left = 554.0
+offset_top = 242.0
+offset_right = 594.0
+offset_bottom = 282.0
+scale = Vector2(2.9580977, 2.7042375)
+icon = ExtResource("1_271b8")
+
+[node name="lvl3" type="Button" parent="." unique_id=186561414]
+unique_name_in_owner = true
+z_index = 4
+offset_left = 952.0
+offset_top = 240.0
+offset_right = 992.0
+offset_bottom = 280.0
+scale = Vector2(2.8801441, 2.8074832)
+icon = ExtResource("1_271b8")
+
+[node name="lvl4" type="Button" parent="." unique_id=1879167653]
+unique_name_in_owner = true
+z_index = 4
+offset_left = 952.00006
+offset_top = 441.00003
+offset_right = 992.00006
+offset_bottom = 481.00003
+scale = Vector2(2.8756115, 2.7945333)
+icon = ExtResource("1_271b8")
+
+[node name="lvl5" type="Button" parent="." unique_id=866736174]
+unique_name_in_owner = true
+z_index = 4
+offset_left = 551.00006
+offset_top = 448.0
+offset_right = 591.00006
+offset_bottom = 488.0
+scale = Vector2(3.0072544, 2.6389585)
+icon = ExtResource("1_271b8")
+
+[node name="lvl6" type="Button" parent="." unique_id=1206150979]
+unique_name_in_owner = true
+z_index = 4
+offset_left = 180.0
+offset_top = 446.99997
+offset_right = 220.0
+offset_bottom = 486.99997
+scale = Vector2(2.804248, 2.6495163)
+icon = ExtResource("1_271b8")
+
+[node name="BG" type="ColorRect" parent="." unique_id=376483428]
+z_index = -1
+offset_right = 1283.0
+offset_bottom = 720.0
+color = Color(0.14117648, 0.14117648, 0.14117648, 1)
 
 [node name="1" type="Label" parent="." unique_id=181442532]
-z_index = 2
+z_index = 5
 offset_left = 222.0
 offset_top = 264.0
 offset_right = 262.0
@@ -15,7 +84,7 @@ theme_override_font_sizes/font_size = 50
 text = "1"
 
 [node name="2" type="Label" parent="." unique_id=1270264254]
-z_index = 2
+z_index = 5
 offset_left = 599.0
 offset_top = 261.0
 offset_right = 639.0
@@ -26,7 +95,7 @@ text = "2
 "
 
 [node name="3" type="Label" parent="." unique_id=712189103]
-z_index = 2
+z_index = 5
 offset_left = 998.0
 offset_top = 266.0
 offset_right = 1038.0
@@ -37,7 +106,7 @@ text = "3
 "
 
 [node name="4" type="Label" parent="." unique_id=220693919]
-z_index = 2
+z_index = 5
 offset_left = 221.0
 offset_top = 470.0
 offset_right = 261.0
@@ -49,7 +118,7 @@ text = "4
 "
 
 [node name="5" type="Label" parent="." unique_id=724267406]
-z_index = 2
+z_index = 5
 offset_left = 597.0
 offset_top = 469.0
 offset_right = 637.0
@@ -61,7 +130,7 @@ text = "5
 "
 
 [node name="6" type="Label" parent="." unique_id=1380824155]
-z_index = 2
+z_index = 5
 offset_left = 995.0
 offset_top = 467.0
 offset_right = 1035.0
@@ -81,59 +150,47 @@ offset_bottom = 169.0
 theme_override_font_sizes/font_size = 132
 text = "Levels Menus"
 
-[node name="lvl1" type="Button" parent="." unique_id=1210796959]
-z_index = 1
-offset_left = 173.0
-offset_top = 241.00002
-offset_right = 213.0
-offset_bottom = 281.0
-scale = Vector2(3.1067264, 2.8704872)
-icon = ExtResource("1_271b8")
+[node name="lvl1_completed" type="ColorRect" parent="." unique_id=1652096675]
+offset_left = 166.0
+offset_top = 236.0
+offset_right = 206.0
+offset_bottom = 276.0
+scale = Vector2(3.4822712, 3.058823)
 
-[node name="lvl2" type="Button" parent="." unique_id=1852731952]
-z_index = 1
-offset_left = 554.0
-offset_top = 242.0
-offset_right = 594.0
-offset_bottom = 282.0
-scale = Vector2(2.9580977, 2.7042375)
-icon = ExtResource("1_271b8")
+[node name="lvl2_completed" type="ColorRect" parent="." unique_id=1674276893]
+offset_left = 542.0
+offset_top = 236.0
+offset_right = 582.0
+offset_bottom = 276.0
+scale = Vector2(3.4822712, 3.058823)
 
-[node name="lvl3" type="Button" parent="." unique_id=186561414]
-z_index = 1
-offset_left = 952.0
-offset_top = 240.0
-offset_right = 992.0
-offset_bottom = 280.0
-scale = Vector2(2.8801441, 2.8074832)
-icon = ExtResource("1_271b8")
+[node name="lvl3_completed" type="ColorRect" parent="." unique_id=1526560664]
+offset_left = 938.0
+offset_top = 237.00002
+offset_right = 978.0
+offset_bottom = 277.0
+scale = Vector2(3.4822712, 3.058823)
 
-[node name="lvl4" type="Button" parent="." unique_id=1879167653]
-z_index = 1
-offset_left = 952.00006
-offset_top = 441.00003
-offset_right = 992.00006
-offset_bottom = 481.00003
-scale = Vector2(2.8756115, 2.7945333)
-icon = ExtResource("1_271b8")
+[node name="lvl4_completed" type="ColorRect" parent="." unique_id=675044639]
+offset_left = 939.0
+offset_top = 439.00003
+offset_right = 979.0
+offset_bottom = 479.00003
+scale = Vector2(3.4822712, 3.058823)
 
-[node name="lvl5" type="Button" parent="." unique_id=866736174]
-z_index = 1
-offset_left = 551.00006
-offset_top = 448.0
-offset_right = 591.00006
-offset_bottom = 488.0
-scale = Vector2(3.0072544, 2.6389585)
-icon = ExtResource("1_271b8")
+[node name="lvl5_completed" type="ColorRect" parent="." unique_id=1567260992]
+offset_left = 544.0
+offset_top = 439.0
+offset_right = 584.0
+offset_bottom = 479.0
+scale = Vector2(3.4822712, 3.058823)
 
-[node name="lvl6" type="Button" parent="." unique_id=1206150979]
-z_index = 1
-offset_left = 180.0
-offset_top = 446.99997
-offset_right = 220.0
-offset_bottom = 486.99997
-scale = Vector2(2.804248, 2.6495163)
-icon = ExtResource("1_271b8")
+[node name="lvl6_completed" type="ColorRect" parent="." unique_id=1242816836]
+offset_left = 169.00006
+offset_top = 439.0
+offset_right = 209.00006
+offset_bottom = 479.0
+scale = Vector2(3.4822712, 3.058823)
 
 [node name="lvl1_locked" type="ColorRect" parent="." unique_id=1500833038]
 offset_left = 166.0
@@ -141,7 +198,7 @@ offset_top = 236.0
 offset_right = 206.0
 offset_bottom = 276.0
 scale = Vector2(3.4822712, 3.058823)
-color = Color(0.12591085, 0.12591085, 0.12591082, 1)
+color = Color(0.53333336, 0, 0.019607844, 1)
 
 [node name="lvl2_locked" type="ColorRect" parent="." unique_id=1821115593]
 offset_left = 542.0
@@ -149,23 +206,23 @@ offset_top = 236.0
 offset_right = 582.0
 offset_bottom = 276.0
 scale = Vector2(3.4822712, 3.058823)
-color = Color(0.11415807, 0.11415809, 0.11415807, 1)
+color = Color(0.53333336, 0, 0.019607844, 1)
 
 [node name="lvl3_locked" type="ColorRect" parent="." unique_id=663821341]
-offset_left = 944.00006
-offset_top = 235.00002
-offset_right = 984.00006
-offset_bottom = 275.0
+offset_left = 938.0
+offset_top = 237.00002
+offset_right = 978.0
+offset_bottom = 277.0
 scale = Vector2(3.4822712, 3.058823)
-color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+color = Color(0.53333336, 0, 0.019607844, 1)
 
 [node name="lvl4_locked" type="ColorRect" parent="." unique_id=1224381745]
-offset_left = 944.00006
-offset_top = 439.0
-offset_right = 984.00006
-offset_bottom = 479.0
+offset_left = 939.0
+offset_top = 439.00003
+offset_right = 979.0
+offset_bottom = 479.00003
 scale = Vector2(3.4822712, 3.058823)
-color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+color = Color(0.53333336, 0, 0.019607844, 1)
 
 [node name="lvl5_locked" type="ColorRect" parent="." unique_id=1996963081]
 offset_left = 544.0
@@ -173,7 +230,7 @@ offset_top = 439.0
 offset_right = 584.0
 offset_bottom = 479.0
 scale = Vector2(3.4822712, 3.058823)
-color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+color = Color(0.53333336, 0, 0.019607844, 1)
 
 [node name="lvl6_locked" type="ColorRect" parent="." unique_id=781876667]
 offset_left = 169.00006
@@ -181,4 +238,48 @@ offset_top = 439.0
 offset_right = 209.00006
 offset_bottom = 479.0
 scale = Vector2(3.4822712, 3.058823)
-color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+color = Color(0.53333336, 0, 0.019607844, 1)
+
+[node name="Locks" type="Node" parent="." unique_id=136247610]
+
+[node name="lock1" type="Sprite2D" parent="Locks" unique_id=187129970]
+z_index = 2
+position = Vector2(235, 304)
+scale = Vector2(6.0103927, 4.762322)
+
+[node name="lock2" type="Sprite2D" parent="Locks" unique_id=857198190]
+z_index = 2
+position = Vector2(611, 300.00003)
+scale = Vector2(5.684503, 4.6209574)
+texture = ExtResource("2_52mtt")
+
+[node name="lock3" type="Sprite2D" parent="Locks" unique_id=1894760515]
+z_index = 2
+position = Vector2(1012.00006, 302.00003)
+scale = Vector2(6.0949764, 4.627835)
+texture = ExtResource("2_52mtt")
+
+[node name="lock4" type="Sprite2D" parent="Locks" unique_id=576404388]
+z_index = 2
+position = Vector2(236.00002, 505.99997)
+scale = Vector2(5.7982407, 4.4430666)
+texture = ExtResource("2_52mtt")
+
+[node name="lock5" type="Sprite2D" parent="Locks" unique_id=1073878337]
+z_index = 2
+position = Vector2(611, 504)
+scale = Vector2(6.6035542, 4.3347793)
+texture = ExtResource("2_52mtt")
+
+[node name="lock6" type="Sprite2D" parent="Locks" unique_id=111781766]
+z_index = 2
+position = Vector2(1009.99994, 502.00003)
+scale = Vector2(6.557817, 4.3828707)
+texture = ExtResource("2_52mtt")
+
+[connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]
+[connection signal="pressed" from="lvl3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="lvl4" to="." method="_on_lvl_4_pressed"]
+[connection signal="pressed" from="lvl5" to="." method="_on_lvl_5_pressed"]
+[connection signal="pressed" from="lvl6" to="." method="_on_lvl_6_pressed"]
