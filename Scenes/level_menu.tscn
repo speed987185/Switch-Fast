@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://dqi6u5om3m8kt"]
+
+[ext_resource type="Texture2D" uid="uid://c13ktnwis356y" path="res://Menu/level.png" id="1_c64aj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1s0l"]
+bg_color = Color(0.14117648, 0.14117648, 0.14117648, 1)
+
+[node name="LevelMenu" type="Control" unique_id=217767299]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1799320312]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d1s0l")
+
+[node name="Label" type="Label" parent="." unique_id=986078442]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 64.0
+offset_right = 885.0
+offset_bottom = 207.0
+theme_override_font_sizes/font_size = 134
+text = "Levels"
+
+[node name="lvl1" type="Button" parent="." unique_id=1518379919]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 248.99997
+offset_right = 259.0
+offset_bottom = 288.99997
+scale = Vector2(3.8160014, 3.1999972)
+icon = ExtResource("1_c64aj")
+
+[node name="Label" type="Label" parent="lvl1" unique_id=347635280]
+layout_mode = 0
+offset_left = 14.937101
+offset_top = 9.062517
+offset_right = 26.991606
+offset_bottom = 32.062515
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+
+[node name="lvl2" type="Button" parent="." unique_id=858259278]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 248.99997
+offset_right = 594.0
+offset_bottom = 288.99997
+scale = Vector2(3.8160014, 3.1999972)
+icon = ExtResource("1_c64aj")
+
+[node name="Label2" type="Label" parent="lvl2" unique_id=769033037]
+layout_mode = 0
+offset_left = 16.247375
+offset_top = 8.437514
+offset_right = 28.30188
+offset_bottom = 31.437515
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "2"
+
+[node name="lvl3" type="Button" parent="." unique_id=552617071]
+layout_mode = 0
+offset_left = 874.0
+offset_top = 248.99997
+offset_right = 914.0
+offset_bottom = 288.99997
+scale = Vector2(3.8160014, 3.1999972)
+icon = ExtResource("1_c64aj")
+
+[node name="Label3" type="Label" parent="lvl3" unique_id=178444588]
+layout_mode = 0
+offset_left = 15.985329
+offset_top = 8.125015
+offset_right = 28.039833
+offset_bottom = 31.125015
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+
+[node name="lvl4" type="Button" parent="." unique_id=605757751]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 434.0
+offset_right = 918.0
+offset_bottom = 474.0
+scale = Vector2(3.8160014, 3.1999972)
+icon = ExtResource("1_c64aj")
+
+[node name="Label4" type="Label" parent="lvl4" unique_id=1238716229]
+z_index = 1
+layout_mode = 0
+offset_left = 15.461212
+offset_top = 7.500004
+offset_right = 27.515717
+offset_bottom = 50.500004
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "4
+"
+
+[node name="lvl5" type="Button" parent="." unique_id=382826123]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 434.0
+offset_right = 593.0
+offset_bottom = 474.0
+scale = Vector2(3.8160014, 3.1999972)
+icon = ExtResource("1_c64aj")
+
+[node name="Label5" type="Label" parent="lvl5" unique_id=2141670519]
+z_index = 1
+layout_mode = 0
+offset_left = 14.675049
+offset_top = 8.1250105
+offset_right = 26.729553
+offset_bottom = 71.12501
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5
+
+"
+
+[node name="lvl6" type="Button" parent="." unique_id=1458502213]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 434.0
+offset_right = 273.0
+offset_bottom = 474.0
+scale = Vector2(3.8160014, 3.1999972)
+icon = ExtResource("1_c64aj")
+
+[node name="Label6" type="Label" parent="lvl6" unique_id=444597002]
+z_index = 1
+layout_mode = 0
+offset_left = 14.675049
+offset_top = 9.3750105
+offset_right = 26.729553
+offset_bottom = 92.37501
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "6
+
+
+"

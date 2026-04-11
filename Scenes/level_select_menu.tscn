@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://gcsxex131pan"]
+
+[ext_resource type="Texture2D" uid="uid://c13ktnwis356y" path="res://Menu/level.png" id="1_271b8"]
+
+[node name="LevelSelectMenu" type="Node2D" unique_id=1434110705]
+
+[node name="1" type="Label" parent="." unique_id=181442532]
+z_index = 2
+offset_left = 222.0
+offset_top = 264.0
+offset_right = 262.0
+offset_bottom = 331.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "1"
+
+[node name="2" type="Label" parent="." unique_id=1270264254]
+z_index = 2
+offset_left = 599.0
+offset_top = 261.0
+offset_right = 639.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "2
+"
+
+[node name="3" type="Label" parent="." unique_id=712189103]
+z_index = 2
+offset_left = 998.0
+offset_top = 266.0
+offset_right = 1038.0
+offset_bottom = 389.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "3
+"
+
+[node name="4" type="Label" parent="." unique_id=220693919]
+z_index = 2
+offset_left = 221.0
+offset_top = 470.0
+offset_right = 261.0
+offset_bottom = 649.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "4
+
+"
+
+[node name="5" type="Label" parent="." unique_id=724267406]
+z_index = 2
+offset_left = 597.0
+offset_top = 469.0
+offset_right = 637.0
+offset_bottom = 648.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "5
+
+"
+
+[node name="6" type="Label" parent="." unique_id=1380824155]
+z_index = 2
+offset_left = 995.0
+offset_top = 467.0
+offset_right = 1035.0
+offset_bottom = 702.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "6
+
+
+"
+
+[node name="Label" type="Label" parent="." unique_id=1568158493]
+offset_left = 162.0
+offset_top = 30.0
+offset_right = 1119.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 132
+text = "Levels Menus"
+
+[node name="lvl1" type="Button" parent="." unique_id=1210796959]
+z_index = 1
+offset_left = 173.0
+offset_top = 241.00002
+offset_right = 213.0
+offset_bottom = 281.0
+scale = Vector2(3.1067264, 2.8704872)
+icon = ExtResource("1_271b8")
+
+[node name="lvl2" type="Button" parent="." unique_id=1852731952]
+z_index = 1
+offset_left = 554.0
+offset_top = 242.0
+offset_right = 594.0
+offset_bottom = 282.0
+scale = Vector2(2.9580977, 2.7042375)
+icon = ExtResource("1_271b8")
+
+[node name="lvl3" type="Button" parent="." unique_id=186561414]
+z_index = 1
+offset_left = 952.0
+offset_top = 240.0
+offset_right = 992.0
+offset_bottom = 280.0
+scale = Vector2(2.8801441, 2.8074832)
+icon = ExtResource("1_271b8")
+
+[node name="lvl4" type="Button" parent="." unique_id=1879167653]
+z_index = 1
+offset_left = 952.00006
+offset_top = 441.00003
+offset_right = 992.00006
+offset_bottom = 481.00003
+scale = Vector2(2.8756115, 2.7945333)
+icon = ExtResource("1_271b8")
+
+[node name="lvl5" type="Button" parent="." unique_id=866736174]
+z_index = 1
+offset_left = 551.00006
+offset_top = 448.0
+offset_right = 591.00006
+offset_bottom = 488.0
+scale = Vector2(3.0072544, 2.6389585)
+icon = ExtResource("1_271b8")
+
+[node name="lvl6" type="Button" parent="." unique_id=1206150979]
+z_index = 1
+offset_left = 180.0
+offset_top = 446.99997
+offset_right = 220.0
+offset_bottom = 486.99997
+scale = Vector2(2.804248, 2.6495163)
+icon = ExtResource("1_271b8")
+
+[node name="lvl1_locked" type="ColorRect" parent="." unique_id=1500833038]
+offset_left = 166.0
+offset_top = 236.0
+offset_right = 206.0
+offset_bottom = 276.0
+scale = Vector2(3.4822712, 3.058823)
+color = Color(0.12591085, 0.12591085, 0.12591082, 1)
+
+[node name="lvl2_locked" type="ColorRect" parent="." unique_id=1821115593]
+offset_left = 542.0
+offset_top = 236.0
+offset_right = 582.0
+offset_bottom = 276.0
+scale = Vector2(3.4822712, 3.058823)
+color = Color(0.11415807, 0.11415809, 0.11415807, 1)
+
+[node name="lvl3_locked" type="ColorRect" parent="." unique_id=663821341]
+offset_left = 944.00006
+offset_top = 235.00002
+offset_right = 984.00006
+offset_bottom = 275.0
+scale = Vector2(3.4822712, 3.058823)
+color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+
+[node name="lvl4_locked" type="ColorRect" parent="." unique_id=1224381745]
+offset_left = 944.00006
+offset_top = 439.0
+offset_right = 984.00006
+offset_bottom = 479.0
+scale = Vector2(3.4822712, 3.058823)
+color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+
+[node name="lvl5_locked" type="ColorRect" parent="." unique_id=1996963081]
+offset_left = 544.0
+offset_top = 439.0
+offset_right = 584.0
+offset_bottom = 479.0
+scale = Vector2(3.4822712, 3.058823)
+color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+
+[node name="lvl6_locked" type="ColorRect" parent="." unique_id=781876667]
+offset_left = 169.00006
+offset_top = 439.0
+offset_right = 209.00006
+offset_bottom = 479.0
+scale = Vector2(3.4822712, 3.058823)
+color = Color(0.1254902, 0.1254902, 0.1254902, 1)

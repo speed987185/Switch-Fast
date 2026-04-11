@@ -22,6 +22,8 @@
 [ext_resource type="FontFile" uid="uid://b6ee30ss2buoc" path="res://font/font/Pixelmax-Regular.otf" id="18_b3802"]
 [ext_resource type="PackedScene" uid="uid://d0ujllnxwqp8m" path="res://Scenes/pause_menu.tscn" id="21_pdsj5"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_pdsj5"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsu2k"]
 texture = ExtResource("4_ynf5e")
 0:0/0 = 0
@@ -525,8 +527,15 @@ scale = Vector2(1, 1)
 position = Vector2(52, -20)
 zoom = Vector2(2, 2)
 limit_bottom = 800
-limit_smoothed = true
-position_smoothing_enabled = true
+
+[node name="Label" type="Label" parent="Player/Camera2D" unique_id=1999142623]
+offset_left = -303.0
+offset_top = -172.0
+offset_right = -192.0
+offset_bottom = -149.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Coin Count: 0"
+label_settings = SubResource("LabelSettings_pdsj5")
 
 [node name="Player2" parent="." unique_id=1683325602 instance=ExtResource("2_bo1nx")]
 position = Vector2(774, 368)
@@ -827,14 +836,6 @@ offset_bottom = 653.0
 theme_override_fonts/font = ExtResource("18_b3802")
 text = "BE CAREFUL"
 
-[node name="Label10" type="Label" parent="Texts" unique_id=454839177]
-offset_left = 4685.0
-offset_top = 418.0
-offset_right = 4904.0
-offset_bottom = 455.0
-theme_override_fonts/font = ExtResource("18_b3802")
-text = "you made it king 👑"
-
 [node name="Label6" type="Label" parent="Texts" unique_id=795139851]
 offset_left = 2116.0
 offset_top = 553.0
@@ -862,6 +863,15 @@ theme_override_fonts/font = ExtResource("18_b3802")
 theme_override_font_sizes/font_size = 43
 text = "JUMP!!!!!!!!!!"
 
+[node name="Label10" type="Label" parent="Texts" unique_id=454839177]
+offset_left = 4685.0
+offset_top = 418.0
+offset_right = 4904.0
+offset_bottom = 455.0
+theme_override_fonts/font = ExtResource("18_b3802")
+text = "you made it king 👑"
+
 [node name="PauseMenu" parent="." unique_id=1266123414 instance=ExtResource("21_pdsj5")]
+visible = false
 
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
