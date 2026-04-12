@@ -11,9 +11,3 @@ func add_point():
 	
 	
 	
-	
-func atempts_count():
-	attempts += 1
-	attempt_score.text = " attempts :" + str(attempts)
-	
-	

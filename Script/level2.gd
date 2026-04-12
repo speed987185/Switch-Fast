@@ -1,27 +1,10 @@
-class_name LevelScene
 extends Node2D
 
-@export var level_identifier: String = "level_one"
-
-@onready var player1: Node2D = $Player	  
+@onready var player1: Node2D = $Player    
 @onready var player2: Node2D = $Player2
 @onready var timer: Timer = $Timer
 
 var active_player: Node2D
-var next_scene: String = ""
-
-const LEVEL_TRANSITION_DATA := {
-	"level_one": {
-		"next_scene": "res://Scenes/lvl2.tscn",
-		"completion_flag": "lvl1_completed",
-	},
-	"level_two": {
-		"next_scene": "res://Scenes/main.tscn",
-		"completion_flag": "lvl2_completed",
-	},
-}
-
-@onready var fade_player: AnimationPlayer = FadeTransition.get_node("AnimationPlayer")
 
 func _ready():
 	active_player = player1
@@ -40,11 +23,6 @@ func _ready():
 	timer.wait_time = 1.5
 	timer.one_shot = true
 	timer.timeout.connect(_on_timer_timeout)
-
-	if not fade_player.is_connected("animation_finished", Callable(self, "_on_fade_finished")):
-		fade_player.connect("animation_finished", Callable(self, "_on_fade_finished"))
-
-	fade_player.play("fade_out")
 
 func _input(event: InputEvent):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -94,6 +72,8 @@ func enable_camera(player_node: Node2D, enable: bool):
 		if cam:
 			cam.enabled = enable
 			
+func _fade():
+		$FadeTransition/AnimationPlayer.play("fade_out")
 	
 	
 	
@@ -102,22 +82,10 @@ func enable_camera(player_node: Node2D, enable: bool):
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	var transition_data: Dictionary = LEVEL_TRANSITION_DATA.get(level_identifier, {}) as Dictionary
-	if transition_data.is_empty():
-		return
+	$FadeTransition.show()
+	$FadeTransition/fade_timer.start()
+	$FadeTransition/AnimationPlayer.play("fade_in")
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	
-	next_scene = transition_data.get("next_scene", "") as String
-	var completion_flag: String = transition_data.get("completion_flag", "") as String
-	if completion_flag != "":
-		LevelCore.set(completion_flag, true)
-
-	if next_scene != "":
-		fade_player.play("fade_in")
-
-
-func _on_fade_finished(anim_name: String) -> void:
-	if anim_name == "fade_in" and next_scene != "":
-		get_tree().change_scene_to_file(next_scene)
-		fade_player.play("fade_out")
 	
 	
