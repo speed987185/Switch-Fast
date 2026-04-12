@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bw3n8efxgmirf"]
 
 [ext_resource type="Script" uid="uid://c5j5gtiwnbax7" path="res://Script/main.gd" id="1_vplc7"]
-[ext_resource type="PackedScene" uid="uid://dgt7jinmpirqp" path="res://Scenes/fade_transition.tscn" id="2_p5c1a"]
 [ext_resource type="PackedScene" uid="uid://dyo88nbbwmdlp" path="res://Scenes/game_manager.tscn" id="3_vruis"]
 [ext_resource type="PackedScene" uid="uid://c0r21vnuya81t" path="res://Scenes/player.tscn" id="4_xrxow"]
 [ext_resource type="PackedScene" uid="uid://jlmc8usxrybt" path="res://Scenes/player_2.tscn" id="5_k2xpx"]
@@ -154,6 +153,22 @@ tile_set = SubResource("TileSet_5fyxw")
 format = 2
 layer_0/tile_data = PackedInt32Array(2883584, 0, 0, 2883585, 0, 0, 2883586, 0, 0, 2949119, 0, 0, 2490371, 0, 0, 2555902, 0, 0, 2555907, 1, 0, 2621443, 1, 0, 2686979, 1, 0, 2752515, 1, 0, 2818051, 1, 0, 2621438, 1, 0, 2686974, 1, 0, 2752510, 1, 0, 2818046, 1, 0, 2883582, 1, 0, 2883587, 0, 1342177280, 2949118, 0, 1610612736, 2490372, 2, 0, 2555901, 2, 0, 2883672, 1, 0, 2883671, 1, 0, 2883670, 1, 0, 2883669, 1, 0, 2883668, 1, 0, 2883667, 1, 0, 2883666, 1, 0, 2883665, 1, 0, 2883664, 1, 0, 2883663, 1, 0, 2424841, 2, 0, 2228241, 2, 0, 2228242, 2, 0, 2228243, 2, 0, 1966109, 2, 0, 1966110, 2, 0, 1966111, 2, 0, 1900575, 2, 0, 1900576, 2, 0, 1900577, 2, 0, 1900578, 2, 0, 1900583, 2, 0, 1900588, 2, 0, 1835057, 2, 0, 1900593, 2, 0, 1769528, 2, 0, 1769529, 2, 0, 1769530, 2, 0, 1703994, 2, 0, 1703995, 2, 0, 1572926, 2, 0, 1572927, 2, 0, 1572928, 2, 0, 1507392, 2, 0, 1507393, 2, 0, 852036, 2, 0, 852037, 2, 0, 852038, 2, 0, 917572, 2, 0, 917571, 2, 0, 917570, 2, 0, 2883662, 1, 0, 2883661, 1, 0, 2883660, 1, 0, 2883659, 1, 0, 2883658, 1, 0, 2883657, 1, 0, 2883656, 1, 0, 2883651, 1, 0, 2883650, 1, 0, 2883649, 1, 0, 2883648, 1, 0, 2883647, 1, 0, 2883646, 1, 0, 2883655, 1, 0, 2883654, 1, 0, 2883653, 1, 0, 2883652, 1, 0, 2883645, 1, 0, 2883644, 1, 0, 2883643, 1, 0, 2883642, 1, 0, 2883641, 1, 0, 2883640, 1, 0, 2883639, 1, 0, 2883638, 1, 0, 2883637, 1, 0, 2883636, 1, 0, 2883635, 1, 0, 2883634, 1, 0)
 metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1780088655]
+offset_left = 1124.0
+offset_top = 570.0
+offset_right = 1350.0
+offset_bottom = 607.0
+text = "final boss waiting for you 
+goodluck...w"
+
+[node name="Label2" type="Label" parent="." unique_id=1847862762]
+offset_left = 1158.0
+offset_top = 193.0
+offset_right = 1259.0
+offset_bottom = 230.0
+text = "feel free to
+jump"
 
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

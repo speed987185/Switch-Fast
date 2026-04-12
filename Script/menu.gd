@@ -29,7 +29,7 @@ func _on_quit_pressed() -> void:
 
 func _on_fade_timer_timeout() -> void:
 	if button_type == "play":
-		get_tree().change_scene_to_file("res://Scenes/main.tscn")
+		get_tree().change_scene_to_file("res://Scenes/lvl1.tscn")
 	elif button_type == "lvl":
 		get_tree().change_scene_to_file("res://Scenes/level_select_menu.tscn")
 	

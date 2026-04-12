@@ -99,10 +99,10 @@ zoom = Vector2(4, 4)
 limit_bottom = 800
 
 [node name="Label" type="Label" parent="Player/Camera2D" unique_id=1999142623]
-offset_left = -303.0
-offset_top = -172.0
-offset_right = -192.0
-offset_bottom = -149.0
+offset_left = -905.0
+offset_top = -959.0
+offset_right = -794.0
+offset_bottom = -936.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Coin Count: 0"
 label_settings = SubResource("LabelSettings_pdsj5")
@@ -148,6 +148,35 @@ position = Vector2(-1, 0)
 tile_set = SubResource("TileSet_5fyxw")
 format = 2
 layer_0/tile_data = PackedInt32Array(2883584, 0, 0, 2883585, 0, 0, 2883586, 0, 0, 2883587, 0, 0, 2883591, 0, 0, 2883592, 0, 0, 2883593, 0, 0, 2883594, 0, 0, 2883595, 0, 0, 2883599, 0, 0, 2883600, 0, 0, 2883601, 0, 0, 2883602, 0, 0, 2883603, 0, 0, 2883604, 0, 0, 2883616, 0, 0, 2883617, 0, 0, 2883618, 0, 0, 2883619, 0, 0, 2883620, 0, 0, 2883621, 0, 0, 2883622, 0, 0, 2883623, 0, 0, 2883624, 0, 0, 2883625, 0, 0, 2883626, 0, 0, 2883627, 0, 0, 2883628, 0, 0, 2883629, 0, 0, 2883638, 0, 0, 2883639, 0, 0, 2883640, 0, 0, 2883641, 0, 0, 2883657, 0, 0, 2883658, 0, 0, 2883659, 0, 0, 2883660, 0, 0, 2883661, 0, 0, 2883662, 0, 0, 2883663, 0, 0, 2883664, 0, 0, 2883665, 0, 0, 2883666, 0, 0, 2883667, 0, 0, 2883668, 0, 0, 2883669, 0, 0, 2949119, 0, 0, 2949118, 0, 0, 2818051, 0, 0, 2752515, 0, 0, 2686979, 0, 0, 2883582, 0, 0, 2818046, 0, 0, 2752510, 0, 0, 2621443, 0, 0, 2555907, 0, 0, 2490371, 0, 0, 2686974, 0, 0, 2621438, 0, 0, 2555902, 0, 0)
+
+[node name="Label" type="Label" parent="." unique_id=1594595137]
+offset_left = 210.0
+offset_top = 591.0
+offset_right = 519.0
+offset_bottom = 608.0
+text = "you might wanna left click and jump"
+
+[node name="Label2" type="Label" parent="." unique_id=2024218375]
+offset_left = 1292.0
+offset_top = 558.0
+offset_right = 1454.0
+offset_bottom = 581.0
+text = "lvl2 wating for you"
+
+[node name="Label3" type="Label" parent="." unique_id=81143630]
+offset_left = -54.0
+offset_top = 615.0
+offset_right = 279.0
+offset_bottom = 678.0
+text = "your mouse have 2 
+buttons you know?"
+
+[node name="Label4" type="Label" parent="." unique_id=1444870510]
+offset_left = -15.0
+offset_top = 561.0
+offset_right = 96.0
+offset_bottom = 578.0
+text = "(on update)"
 
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
